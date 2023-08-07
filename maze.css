@@ -1,0 +1,61 @@
+/*迷宮的CSS */
+#maze {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    margin: 0 auto;
+}
+
+.box-left {
+    width: 480px;
+}
+
+.box-maze {
+
+    height: 480px;
+    width: 480px;
+}
+
+.cell {
+    border: 2px solid rgb(255, 255, 255);
+    border-top: 2px solid rgb(255, 255, 255);
+    height: 20px;
+    width: auto;
+}
+
+.cell.start {
+    background-color: green;
+}
+
+.cell.end {
+    background-color: red;
+}
+
+.cell.path {
+    background-color: yellow;
+}
+
+#upButton{
+    width:100px;
+    height:100px;
+    font-size:30px;
+    margin-left: 2%;
+}
+#downButton{
+    width:100px;
+    height:100px;
+    font-size:30px;
+    margin-left: 3%;
+}
+#leftButton{
+    width:100px;
+    height:100px;
+    font-size:30px;
+    margin-left: 4%;
+}
+#rightButton{
+    width:100px;
+    height:100px;
+    font-size:30px;
+    margin-left: 5%;
+}

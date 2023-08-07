@@ -1,0 +1,10 @@
+/*角色的CSS */
+.character {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(13, 0, 255);
+    transition: all 0.1s ease-out;
+    z-index: 1;
+    /* 將 z-index 設置為比迷宮格子更大的值 */
+}
