@@ -246,7 +246,7 @@ function moveCharacterOnGrid() {
         // Add more levels as needed
     ];*/
     
-    function getRandomInt(max) {
+    /*function getRandomInt(max) {
         return Math.floor(Math.random() * max);
     }
     
@@ -262,10 +262,10 @@ function moveCharacterOnGrid() {
     
     // Use the chosenImage and chosenText variables as needed
     console.log(chosenImage);
-    console.log(chosenText);
+    console.log(chosenText);*/
 
 
-    if (maze.grid[newRow][newCol].star) {
+    /*if (maze.grid[newRow][newCol].star) {
         // Remove the star from the cell
         maze.grid[newRow][newCol].star = false;
         //var currentLevel = 0;
@@ -281,9 +281,9 @@ function moveCharacterOnGrid() {
         // If you want to show some text, you can create a new paragraph element and append it to the document body
         var p = document.createElement('p');
         p.textContent = levels[currentLevel].text; // Get the text from the current level
-        document.body.appendChild(p);*/
+        document.body.appendChild(p);
 
-    }
+    }*/
 }
 }
 
