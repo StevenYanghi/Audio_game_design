@@ -110,7 +110,7 @@ class Maze {
                 }
                 else {
                     // Generate random star level
-                    const starLevel = Math.floor(Math.random() * 1.07);
+                    const starLevel = Math.floor(Math.random() * 1.04);
                     if(starLevel>0){
                         const star = document.createElement("span");
                         star.innerHTML = "★".repeat(starLevel);
@@ -183,29 +183,35 @@ var newRow = currentRow;
 var newCol = currentCol;
 
 function moveCharacter(direction) {
+    
     switch (direction) {
         case "N":
             if (!maze.grid[currentRow][currentCol].walls["N"]) {
                 newRow = currentRow - 1;
+                moveCharacterOnGrid();
             }
             break;
         case "S":
             if (!maze.grid[currentRow][currentCol].walls["S"]) {
                 newRow = currentRow + 1;
+                moveCharacterOnGrid();
             }
             break;
         case "W":
             if (!maze.grid[currentRow][currentCol].walls["W"]) {
                 newCol = currentCol - 1;
+                moveCharacterOnGrid();
             }
             break;
         case "E":
             if (!maze.grid[currentRow][currentCol].walls["E"]) {
                 newCol = currentCol + 1;
+                moveCharacterOnGrid();
             }
             break;
     }
 
+function moveCharacterOnGrid() {
     characterElement.style.left = newCol * 24 + "px";
     characterElement.style.top = newRow * 24 + "px";
     currentRow = newRow;
@@ -215,7 +221,8 @@ function moveCharacter(direction) {
         alert("恭喜您，找到出口！");
     }
 
-    var levels = [
+
+    /*var levels = [
         {
             image: '找不同.png',
             text: '關卡一_找不同'
@@ -237,7 +244,7 @@ function moveCharacter(direction) {
             text: '關卡四_重組句子'
         }
         // Add more levels as needed
-    ];
+    ];*/
     
     function getRandomInt(max) {
         return Math.floor(Math.random() * max);
@@ -267,16 +274,17 @@ function moveCharacter(direction) {
         alert("您遇到了一個關卡！");
 
         // If you want to show an image, you can create a new image element and append it to the document body
-        var img = document.createElement('img');
+        /*var img = document.createElement('img');
         img.src =  levels[currentLevel].image; // Get the image from the current level
         document.body.appendChild(img);
 
         // If you want to show some text, you can create a new paragraph element and append it to the document body
         var p = document.createElement('p');
         p.textContent = levels[currentLevel].text; // Get the text from the current level
-        document.body.appendChild(p);
+        document.body.appendChild(p);*/
 
     }
+}
 }
 
 document.addEventListener("keydown", function (event) {
