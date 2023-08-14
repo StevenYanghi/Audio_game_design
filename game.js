@@ -115,7 +115,7 @@ class Maze {
                         const star = document.createElement("span");
                         star.innerHTML = "★".repeat(starLevel);
                         div.appendChild(star); 
-                        this.grid[row][col].star = true;  
+                        //this.grid[row][col].star = true;  
                     }
                 }
 
